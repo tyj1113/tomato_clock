@@ -1,45 +1,41 @@
 <view class="homeContainer">
         <scroll-view class="todoList" scroll-y="true">
             <view class="item">
-                <view class="select">圆圈</view>
-                <text>文本1</text>
+                <view class="select"></view>
+                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
             </view>
             <view class="item">
-                <view class="select">圆圈</view>
-                <text>文本1</text>
+                <view class="select"></view>
+                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
             </view>
             <view class="item">
-                <view class="select">圆圈</view>
-                <text>文本1</text>
+                <view class="select"></view>
+                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
             </view>
             <view class="item">
-                <view class="select">圆圈</view>
-                <text>文本1</text>
+                <view class="select"></view>
+                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
             </view>
             <view class="item">
-                <view class="select">圆圈</view>
-                <text>文本1</text>
+                <view class="select"></view>
+                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
             </view>
             <view class="item">
-                <view class="select">圆圈</view>
-                <text>文本1</text>
+                <view class="select"></view>
+                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
             </view>
             <view class="item">
-                <view class="select">圆圈</view>
-                <text>文本1</text>
+                <view class="select"></view>
+                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
             </view>
             <view class="item">
-                <view class="select">圆圈</view>
-                <text>文本1</text>
-            </view>
-            <view class="item">
-                <view class="select">圆圈</view>
-                <text>文本1</text>
+                <view class="select"></view>
+                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
             </view>
         </scroll-view>
     <view class="tomatoWrapper">
-        <button>创建任务</button>
-        <text>点击开始闹钟</text>
+        <button class="tomatoButton">创建任务</button>
+        <text>点击开始番茄</text>
         <image src="../../images/tomato.png"></image>
     </view>
 </view>
