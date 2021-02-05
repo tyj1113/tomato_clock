@@ -1,1 +1,7 @@
-/* pages/home/home.wxss */
+.homeContainer{
+
+}
+.homeContainer .todoList{
+    max-height: 552rpx;
+    min-height: 552rpx;
+}

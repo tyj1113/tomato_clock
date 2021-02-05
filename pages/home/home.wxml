@@ -1,12 +1,47 @@
-<view class="content">
-    <view>
-        <view>圆圈</view>
-        <text>文本</text>
+<view class="homeContainer">
+        <scroll-view class="todoList" scroll-y="true">
+            <view class="item">
+                <view class="select">圆圈</view>
+                <text>文本1</text>
+            </view>
+            <view class="item">
+                <view class="select">圆圈</view>
+                <text>文本1</text>
+            </view>
+            <view class="item">
+                <view class="select">圆圈</view>
+                <text>文本1</text>
+            </view>
+            <view class="item">
+                <view class="select">圆圈</view>
+                <text>文本1</text>
+            </view>
+            <view class="item">
+                <view class="select">圆圈</view>
+                <text>文本1</text>
+            </view>
+            <view class="item">
+                <view class="select">圆圈</view>
+                <text>文本1</text>
+            </view>
+            <view class="item">
+                <view class="select">圆圈</view>
+                <text>文本1</text>
+            </view>
+            <view class="item">
+                <view class="select">圆圈</view>
+                <text>文本1</text>
+            </view>
+            <view class="item">
+                <view class="select">圆圈</view>
+                <text>文本1</text>
+            </view>
+        </scroll-view>
+    <view class="tomatoWrapper">
+        <button>创建任务</button>
+        <text>点击开始闹钟</text>
+        <image src="../../images/tomato.png"></image>
     </view>
 </view>
-<button>创建任务</button>
-<view class="tomatoWrapper">
-    <text>点击开始闹钟</text>
-    <image src="../../images/tomato.png"></image>
-</view>
+
 
