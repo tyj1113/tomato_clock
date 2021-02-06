@@ -34,9 +34,10 @@
             </view>
         </scroll-view>
     <view class="tomatoWrapper">
-        <t-button class="createButton"  text="创建任务"></t-button>
+        <t-button bind:tap="showConfirm"    class="createButton" text="创建任务"></t-button>
         <t-clock text="点击开始番茄"></t-clock>
     </view>
+    <t-confirm placeholder="创建任务" visible="{{visible}}" bind:confirm="update" bind:cancel="hideConfirm"></t-confirm>
 </view>
 
 
