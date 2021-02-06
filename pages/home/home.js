@@ -10,7 +10,6 @@ Page({
         this.hideConfirm()
     },
     hideConfirm() {
-        this.data.visible=false
-        // this.setData({visible: false})
+        this.setData({visible: false})
     }
 })
