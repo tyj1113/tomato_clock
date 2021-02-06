@@ -54,13 +54,10 @@
     flex: 1;
     background:#EEF7F6;
     border-radius: 20rpx;
-    margin:44rpx 16rpx 10rpx;
+    margin:44rpx 16rpx 20rpx;
     box-shadow: 0 4rpx 16rpx 0 rgba(0,0,0,0.1);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    padding-top: 66rpx;
 }
 .tomatoWrapper image{
     width: 480rpx;
