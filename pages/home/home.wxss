@@ -24,12 +24,24 @@
     margin: 0;
 }
 .todoList .item .select {
-    box-sizing: border-box;
     width: 28rpx;
     height: 28rpx;
     border: 4rpx solid #F87D60;
     border-radius: 50%;
     margin-right: 26rpx;
+    position: relative;
+}
+.todoList .item .select.active::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 20rpx;
+    height: 20rpx;
+    background: #F87D60;
+    border-radius: 50%;
+
 }
 .todoList .item text {
     flex: 1;

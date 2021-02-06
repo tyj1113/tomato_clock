@@ -1,7 +1,7 @@
 <view class="homeContainer">
         <scroll-view class="todoList" scroll-y="true">
             <view class="item">
-                <view class="select"></view>
+                <view class="select active"></view>
                 <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
             </view>
             <view class="item">
