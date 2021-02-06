@@ -1,0 +1,1 @@
+<button class="tomatoButton {{type}}"  >{{text}}</button>

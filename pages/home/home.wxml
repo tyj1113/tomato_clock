@@ -34,7 +34,7 @@
             </view>
         </scroll-view>
     <view class="tomatoWrapper">
-        <button class="tomatoButton">创建任务</button>
+        <t-button class="createButton"  text="创建任务"></t-button>
         <text>点击开始番茄</text>
         <image src="../../images/tomato.png"></image>
     </view>

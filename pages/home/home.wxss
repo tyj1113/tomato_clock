@@ -1,3 +1,4 @@
+@import "../../components/button/button.wxss";
 .homeContainer{
     height: 100vh;
     background: #F6F6F6;
@@ -39,24 +40,11 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
-.tomatoButton{
-    margin: 0 auto;
-    width: 540rpx;
-    height: 80rpx;
-    border-radius: 14rpx;
-    background: linear-gradient(to right,#F98162, #F66C56);
-    box-shadow: 0rpx 8rpx 16rpx  rgba(246,108,86,0.3);
-    color: #fff;
-    font-size: 26rpx;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.createButton{
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%,-50%);
-
 }
 .button-hover {
     opacity: 0.6;
