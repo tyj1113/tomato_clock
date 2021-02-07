@@ -5,7 +5,8 @@
     <view class="nameWrapper">
         <open-data type='userNickName' class="name"></open-data>
     </view>
-    <button class="loginButton">
+    <button class="loginButton" open-type="getUserInfo"
+            bindgetuserinfo="login">
         登录
     </button>
 </view>
