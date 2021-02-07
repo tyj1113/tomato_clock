@@ -1,0 +1,119 @@
+.container {
+    background: #F6F6F6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 170rpx;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 25rpx;
+    box-sizing: border-box;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.header .avatar {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20rpx;
+    border: 8rpx solid #F6705A;
+}
+
+.header .nameWrapper {
+    display: flex;
+    align-items: center;
+    color: #F6705A;
+    font-size: 32rpx;
+    padding-bottom: 22rpx;
+}
+
+.question::after {
+    border: none;
+}
+
+.question {
+    margin: 0;
+    background: transparent;
+    color: #FE996F;
+    font-size: 24rpx;
+
+}
+
+.tabs {
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 28rpx;
+    color: #333;
+    padding: 20rpx 0;
+}
+
+.tabs > view {
+    position: relative;
+}
+
+.tabs > view.active {
+    opacity: 0.5;
+}
+
+.tabs > view.selected::after {
+    content: "";
+    height: 8rpx;
+    width: 80%;
+    border-radius: 6rpx;
+    background: #F6705A;
+    position: absolute;
+    left: 50%;
+    bottom: -20rpx;
+    transform: translate(-50%, -50%);
+}
+
+.container .list {
+    flex: 1;
+    overflow: scroll;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.container .list .item {
+    background: #fff;
+    font-size: 32rpx;
+    color: #333;
+    border-radius: 8rpx;
+    padding: 18rpx 40rpx 30rpx;
+    box-shadow: 0 1rpx 4rpx rgba(0, 0, 0, 0.1);
+    margin-bottom: 30rpx;
+}
+
+.container .list .item .date {
+    font-size: 34rpx;
+    font-weight: bold;
+    margin-bottom: 24rpx;
+}
+
+.container .list .item .content {
+    display: flex;
+    padding-bottom: 24rpx;
+}
+
+.container .list .item .content .time {
+    padding-right: 20rpx;
+}
+
+.container .list .item .content .detail {
+    flex: 1;
+}
+
+

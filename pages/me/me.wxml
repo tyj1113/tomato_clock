@@ -1,0 +1,201 @@
+<view class="container">
+    <view class="header">
+        <view class="left">
+            <view class="avatar">
+                <open-data type='userAvatarUrl'></open-data>
+            </view>
+            <view class="nameWrapper">
+                <open-data type='userNickName' class="name"></open-data>
+            </view>
+        </view>
+        <button open-type="contact" class="question">问题反馈</button>
+    </view>
+
+    <view class="tabs">
+        <view hover-class='active'
+              class="{{tab === 'tomato' && 'selected'}}"
+               bindtap="changeTab" data-name="tomato">番茄历史
+        </view>
+        <view hover-class='active'
+              class="{{tab === 'task' && 'selected'}}"
+               bindtap="changeTab" data-name="task">我完成的任务
+        </view>
+    </view>
+
+    <scroll-view scroll-y="true" class="list"  wx:if="{{tab === 'tomato'}}">
+        <view class="item">
+            <view class="date">本周四</view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="date">本周四</view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="date">本周四</view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="date">本周四</view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="date">本周四</view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+            <view class="content" >
+                <view class="time">16:00</view>
+                <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+            </view>
+        </view>
+    </scroll-view>
+
+    <scroll-view scroll-y="true" class="list" wx:if="{{tab === 'task'}}">
+        <view class="item">
+    <view class="date">本周五</view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+</view>
+<view class="item">
+    <view class="date">本周四</view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+</view>
+<view class="item">
+    <view class="date">本周四</view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+</view>
+<view class="item">
+    <view class="date">本周四</view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+    <view class="content" >
+        <view class="time">16:00</view>
+        <view class="detail">玩车了玩车了玩车了玩车了玩车了玩车了</view>
+    </view>
+</view>
+    </scroll-view>
+</view>
