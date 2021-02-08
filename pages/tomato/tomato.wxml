@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="clock">
+        <t-clock text="20:13" fontSize="52"></t-clock>
+    </view>
+    <view wx:if="{{!again}}">
+        <view class="stop">
+            <t-button type="mini"  text="暂停" ></t-button>
+        </view>
+            <t-button type="mini" text="放弃" bind:tap="showGiveUpConfirm"></t-button>
+    </view>
+    <view class="again" wx:else>
+        <t-button size="mini" type="change" text="再来一组"></t-button>
+    </view>
+    <t-confirm visible="{{renounce}}" placeholder="放弃理由"
+               bind:confirm="confirmClose"
+               bind:cancel="confirmClose"
+    ></t-confirm>
+</view>

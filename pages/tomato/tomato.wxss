@@ -1,0 +1,10 @@
+.container {
+    background: #F0F7F6;
+    height: 100vh;
+}
+.clock {
+    padding-top: 250rpx;
+}
+.stop {
+    margin-bottom: 40rpx;
+}
