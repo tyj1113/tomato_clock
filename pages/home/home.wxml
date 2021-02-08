@@ -11,7 +11,7 @@
   </scroll-view>
   <view class="tomatoWrapper">
     <t-button bind:tap="showCreateConfirm" class="createButton" text="创建任务"></t-button>
-    <t-clock text="点击开始番茄"></t-clock>
+    <navigator url="/pages/tomato/tomato">    <t-clock text="点击开始计时"></t-clock></navigator>
   </view>
   <t-confirm placeholder="创建任务" visible="{{createVisible}}" bind:confirm="create" bind:cancel="hideCreateConfirm"></t-confirm>
     <t-confirm value="{{content}}" visible="{{updateTextVisible}}" bind:confirm="updateText" bind:cancel="hideUpdateConfirm"></t-confirm>
