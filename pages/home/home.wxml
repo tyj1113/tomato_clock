@@ -1,43 +1,19 @@
 <view class="homeContainer">
-        <scroll-view class="todoList" scroll-y="true">
-            <view class="item">
-                <view class="select active"></view>
-                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
-            </view>
-            <view class="item">
-                <view class="select"></view>
-                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
-            </view>
-            <view class="item">
-                <view class="select"></view>
-                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
-            </view>
-            <view class="item">
-                <view class="select"></view>
-                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
-            </view>
-            <view class="item">
-                <view class="select"></view>
-                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
-            </view>
-            <view class="item">
-                <view class="select"></view>
-                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
-            </view>
-            <view class="item">
-                <view class="select"></view>
-                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
-            </view>
-            <view class="item">
-                <view class="select"></view>
-                <text>文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1文本1</text>
-            </view>
-        </scroll-view>
-    <view class="tomatoWrapper">
-        <t-button bind:tap="showConfirm"    class="createButton" text="创建任务"></t-button>
-        <t-clock text="点击开始番茄"></t-clock>
+  <scroll-view class="todoList" scroll-y="true">
+    <view class="item" wx:for="{{list}}" wx:key="{{item.id}}" wx:if="{{!item.completed}}">
+      <view data-id="{{item.id}}" data-index="{{index}}" class="select {{item.completed && 'active'}}" bind:tap="completed"></view>
+      <text bind:tap="showTextConfirm"
+            data-test="{{item.description}}"
+            data-id="{{item.id}}"
+            data-index="{{index}}"
+      >{{item.description}}</text>
     </view>
-    <t-confirm placeholder="创建任务" visible="{{visible}}" bind:confirm="update" bind:cancel="hideConfirm"></t-confirm>
+  </scroll-view>
+  <view class="tomatoWrapper">
+    <t-button bind:tap="showCreateConfirm" class="createButton" text="创建任务"></t-button>
+    <t-clock text="点击开始番茄"></t-clock>
+  </view>
+  <t-confirm placeholder="创建任务" visible="{{createVisible}}" bind:confirm="create" bind:cancel="hideCreateConfirm"></t-confirm>
+    <t-confirm value="{{content}}" visible="{{updateTextVisible}}" bind:confirm="updateText" bind:cancel="hideUpdateConfirm"></t-confirm>
+
 </view>
-
-
