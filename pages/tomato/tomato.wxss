@@ -4,6 +4,7 @@
 }
 .clock {
     padding-top: 250rpx;
+    font-size: 50rpx;
 }
 .stop {
     margin-bottom: 40rpx;

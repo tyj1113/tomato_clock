@@ -1,18 +1,25 @@
 <view class="container">
     <view class="clock">
-        <t-clock text="20:13" fontSize="52"></t-clock>
+        <t-clock text="{{formatTime}}" fontSize="50"></t-clock>
     </view>
     <view wx:if="{{!again}}">
         <view class="stop">
-            <t-button type="mini"  text="暂停" ></t-button>
+            <t-button type="mini"  text="暂停" wx:if="{{timerStart}}" bind:tap="suspend"></t-button>
+            <t-button type="mini"  text="开始" wx:else bind:tap="startTimer"></t-button>
         </view>
             <t-button type="mini" text="放弃" bind:tap="showGiveUpConfirm"></t-button>
     </view>
     <view class="again" wx:else>
-        <t-button size="mini" type="change" text="再来一组"></t-button>
+        <t-button size="mini" type="change" text="再来一组" bind:tap="againTimer"></t-button>
     </view>
     <t-confirm visible="{{renounce}}" placeholder="放弃理由"
-               bind:confirm="confirmClose"
-               bind:cancel="confirmClose"
-    ></t-confirm>
+               bind:confirm="confirmSure"
+               bind:cancel="confirmClose">
+
+    </t-confirm>
+    <t-confirm visible="{{progress}}" placeholder="完成情况"
+               bind:confirm="progressConfirmSure"
+               bind:cancel="progressConfirmClose">
+
+    </t-confirm>
 </view>

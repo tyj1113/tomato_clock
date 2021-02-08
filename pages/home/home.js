@@ -21,12 +21,12 @@ Page({
       this.setData({list:this.data.list})
     })
   },
-    showTextConfirm(e){
+    showTextConfirm(e){//单击时显示confirm并将文本内容传到content里 从而传给confirm
         this.setData({updateTextVisible: true,content:e.target.dataset.test})
         this.data.updateTextId=e.target.dataset.id
         this.data.updateTextIndex=e.target.dataset.index
     },
-    updateText(e){
+    updateText(e){//点击确定后 获取confirm传的文本 修改任务并覆盖页面数据
         const index = this.data.updateTextIndex
       http.put(`/todos/${this.data.updateTextId}`,{ completed: false, description:`${e.detail}`}).then(
           (res)=>{

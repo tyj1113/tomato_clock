@@ -15,7 +15,7 @@ Component({
     },
     methods:{
         confirm(){
-            this.triggerEvent('confirm', this.data.value)
+            this.triggerEvent('confirm', this.data.value)//将文本内容传出去
             this.data.value=""
         },
         cancel(){
