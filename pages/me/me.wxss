@@ -68,17 +68,17 @@
     opacity: 0.5;
 }
 
-.tabs > view.selected::after {
-    content: "";
-    height: 8rpx;
-    width: 80%;
-    border-radius: 6rpx;
-    background: #F6705A;
-    position: absolute;
-    left: 50%;
-    bottom: -20rpx;
-    transform: translate(-50%, -50%);
-}
+/*.tabs > view.selected::after {*/
+/*    content: "";*/
+/*    height: 8rpx;*/
+/*    width: 80%;*/
+/*    border-radius: 6rpx;*/
+/*    background: #F6705A;*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    bottom: -20rpx;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
 
 .container .list {
     flex: 1;

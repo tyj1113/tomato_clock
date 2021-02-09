@@ -1,14 +1,15 @@
 {
-  "pages":[
-    "pages/home/home",
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/login/login",
+    "pages/me/me",
+    "pages/tomato/tomato",
+    "pages/home/home"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#F98162",
+    "navigationBarTitleText": "番茄闹钟",
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
