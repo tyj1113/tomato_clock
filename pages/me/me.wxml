@@ -12,23 +12,32 @@
     </view>
 
     <view class="tabs">
-<!--        <view hover-class='active'-->
-<!--              class="{{tab === 'tomato' && 'selected'}}"-->
-<!--               bindtap="changeTab" data-name="tomato">番茄历史-->
-<!--        </view>-->
+        <view hover-class='active'
+              class="{{tab === 'tomato' && 'selected'}}"
+               bindtap="changeTab" data-name="tomato">番茄历史
+        </view>
         <view hover-class='active'
               class="{{tab === 'task' && 'selected'}}"
                bindtap="changeTab" data-name="task">我完成的任务
         </view>
     </view>
 
-<!--    <scroll-view scroll-y="true" class="list"  wx:if="{{tab === 'tomato'}}">-->
-<!--    </scroll-view>-->
+    <scroll-view scroll-y="true" class="list"  wx:if="{{tab === 'tomato'}}">
+        <view class="item" wx:for="{{tomatoes}}" wx:key="index" wx:for-item="todo">
+        <wxs src="../../lib/formatDate.wxs" module="formatDate"></wxs>
+        <view class="date">{{formatDate.formatMonth(index)}}</view>
+        <view class="content"  wx:for="{{todo}}" >
+            <view class="time">{{formatDate.formatTime(item.updated_at)}}</view>
+            <view class="detail">{{item.description}}</view>
+        </view>
+        </view>
+    </scroll-view>
+
     < scroll-view scroll-y="true" class="list" wx:if="{{tab === 'task'}}">
 <view class="item" wx:for="{{todos}}" wx:key="index" wx:for-item="todo">
     <wxs src="../../lib/formatDate.wxs" module="formatDate"></wxs>
     <view class="date">{{formatDate.formatMonth(index)}}</view>
-    <view class="content" wx:for="{{todo}}" >
+    <view class="content"  wx:for="{{todo}}" >
         <view class="time">{{formatDate.formatTime(item.created_at)}}</view>
         <view class="detail">{{item.description}}</view>
     </view>
