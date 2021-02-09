@@ -1,7 +1,7 @@
 <view class="homeContainer">
   <scroll-view class="todoList" scroll-y="true">
     <view class="item" wx:for="{{list}}" wx:key="{{item.id}}" wx:if="{{!item.completed}}">
-      <view data-id="{{item.id}}" data-index="{{index}}" class="select {{item.completed && 'active'}}" bind:tap="completed"></view>
+      <view data-id="{{item.id}}" data-index="{{index}}" class="select {{tabIndex===index && 'active'}}" bind:tap="completed"></view>
       <text bind:tap="showTextConfirm"
             data-test="{{item.description}}"
             data-id="{{item.id}}"
