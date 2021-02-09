@@ -1,0 +1,26 @@
+function formatTime(time) {
+    var date = getDate(time)
+    var h = date.getHours().toString()
+    var m = date.getMinutes().toString()
+    if (h.length === 1) {
+        h = "0" + h
+    }
+    if (m.length === 1) {
+        m = "0" + m
+    }
+    return h + ":" + m
+}
+
+function formatMonth(date) {
+    var m = date.substring(0, 2)
+    var d = date.substring(2, 4)
+    if (m[0] === "0") {
+        m = m[1]
+    }
+    if (d[0] === "0") {
+        d = d[1]
+    }
+    return m + "月" + d + "日"
+}
+
+module.exports = {formatTime: formatTime, formatMonth: formatMonth}
