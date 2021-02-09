@@ -1,3 +1,4 @@
+import http from '../../lib/http'
 Page({
     data: {
         defaultTime: 1500,
@@ -6,9 +7,14 @@ Page({
         renounce: false,//控制放弃confirm
         timerStart: true,//控制暂停开始按钮切换
         timer: null,
-        progress:false//控制完成进度confirm
+        progress:false,//控制完成进度confirm
+        tomato:{},//存放服务器返回的闹钟对象
+        renounceText:''//放弃理由
     },
     onShow() {
+        http.post('/tomatoes').then((res)=>{
+this.setData({tomato:res.data.resource})
+        })
         this.timeFormat()
         this.setTimer()
     },
@@ -57,11 +63,16 @@ Page({
 
 
     },
-    confirmSure() {//确定逻辑
+    confirmSure(e) {//确定逻辑
         this.setData({renounce: false})
-        wx.navigateBack({
-            to:-1
-        })
+        http.put(`/tomatoes/${this.data.tomato.id}`,{ description: e.detail, aborted: true })
+            .then((res)=>{
+                console.log(res)
+                wx.navigateBack({
+                    to:-1
+                })
+            })
+
     },
     confirmClose() {//取消逻辑
         this.setTimer()
@@ -78,5 +89,19 @@ Page({
     },
     progressConfirmClose(){
         this.setData({progress: false})
-    }
+    },
+    onHide() {
+        this.clearTimer()
+        http.put(`/tomatoes/${this.data.tomato.id}`, {
+            description: "退出页面放弃",
+            aborted: true
+        })
+    },
+    onUnload() {
+        this.clearTimer()
+        http.put(`/tomatoes/${this.data.tomato.id}`, {
+            description: "退出页面放弃",
+            aborted: true
+        })
+    },
 })
