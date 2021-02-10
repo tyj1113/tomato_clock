@@ -1,0 +1,22 @@
+<view class="container">
+    <view class="clock">
+        <t-clock text="{{formatTime}}" fontSize="50"></t-clock>
+    </view>
+    <view >
+        <view class="stop">
+            <t-button type="mini"  text="暂停" wx:if="{{timerStart}}" bind:tap="suspend"></t-button>
+            <t-button type="mini"  text="开始" wx:else bind:tap="startTimer"></t-button>
+        </view>
+        <t-button type="mini" text="放弃" bind:tap="showGiveUpConfirm"></t-button>
+    </view>
+    <t-confirm visible="{{renounce}}" placeholder="专注失败,登录体验完整功能"
+               bind:confirm="experienceDone"
+               bind:cancel="confirmClose">
+
+    </t-confirm>
+    <t-confirm visible="{{progress}}" placeholder="专注完成,登录体验完整功能"
+               bind:confirm="experienceDone"
+               bind:cancel="experienceDone">
+
+    </t-confirm>
+</view>
