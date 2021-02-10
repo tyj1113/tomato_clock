@@ -10,7 +10,6 @@ Page({
         progress:false,//控制完成进度confirm
         tomato:{},//存放服务器返回的闹钟对象
         confirmText:''//confirm理由
-
     },
     onShow() {
         http.post('/tomatoes').then((res)=>{
@@ -61,8 +60,6 @@ this.setData({tomato:res.data.resource})
     showGiveUpConfirm() {//按下放弃逻辑
         this.setData({renounce:true })
         this.clearTimer()
-
-
     },
     confirmSure(e) {//确定逻辑
         this.setData({confirmText:e.detail})
@@ -72,7 +69,6 @@ this.setData({tomato:res.data.resource})
                     to:-1
                 })
             })
-
     },
     confirmClose() {//取消逻辑
         this.setTimer()
@@ -82,38 +78,42 @@ this.setData({tomato:res.data.resource})
         this.setData({again:false,defaultTime:1500})
         this.timeFormat()
         this.setTimer()
-
     },
     progressConfirmSure(e){
         this.setData({confirmText:e.detail})
         http.put(`/tomatoes/${this.data.tomato.id}`,{ description:this.data.confirmText , aborted: true })
-            .then((res)=>{
-                wx.navigateBack({
-                    to:-1
-                })
-            })
-        // this.setData({progress: false})
+        this.setData({progress: false})
     },
-    progressConfirmClose(){
-            wx.navigateBack({
-                to:-1
-        })
-        // this.setData({progress: false})
+    progressConfirmClose(e){
+        console.log(e)
+        this.setData({confirmText:e.detail})
+        this.setData({progress: false})
+        if(this.data.confirmText){
+            http.put(`/tomatoes/${this.data.tomato.id}`,{ description:this.data.confirmText, aborted: true })
+        }else{
+            http.put(`/tomatoes/${this.data.tomato.id}`,{ description:"未知完成情况", aborted: true })
+        }
     },
-    onHide() {
+    hideAndUnload(){
         if((this.data.renounce || this.data.progress ) && this.data.confirmText.trim()!==''){return}// 如果是自己点击取消放弃 且理由不为空则不更新理由
         this.clearTimer()
-        http.put(`/tomatoes/${this.data.tomato.id}`, {
-            description: "未知理由放弃",
-            aborted: true
-        })
+        if(this.data.renounce ){
+            http.put(`/tomatoes/${this.data.tomato.id}`, {
+                description: "未知理由放弃",
+                aborted: true
+            })
+        }
+        if(this.data.progress ){
+            http.put(`/tomatoes/${this.data.tomato.id}`, {
+                description: "未知完成情况",
+                aborted: true
+            })
+        }
+    },
+    onHide() {
+this.hideAndUnload()
     },
     onUnload() {
-        if((this.data.renounce || this.data.progress )&& this.data.confirmText.trim()!==''){return}// 如果是自己点击取消放弃 且理由不为空则不更新理由
-        this.clearTimer()
-        http.put(`/tomatoes/${this.data.tomato.id}`, {
-            description: "未知理由放弃",
-            aborted: true
-        })
+        this.hideAndUnload()
     },
 })

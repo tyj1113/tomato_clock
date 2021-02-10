@@ -14,7 +14,7 @@
     <view class="tabs">
         <view hover-class='active'
               class="{{tab === 'tomato' && 'selected'}}"
-               bindtap="changeTab" data-name="tomato">番茄历史
+               bindtap="changeTab" data-name="tomato">专注挑战历史
         </view>
         <view hover-class='active'
               class="{{tab === 'task' && 'selected'}}"
