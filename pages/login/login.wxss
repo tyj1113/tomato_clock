@@ -37,7 +37,7 @@
     transform: translateX(-50%);
 }
 
-.loginButton {
+.loginButton,.experienceButton {
     width: 360rpx;
     height: 80rpx;
     border-radius: 14rpx;
@@ -48,6 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20rpx
 }
 
 .button-hover {

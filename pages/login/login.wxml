@@ -9,4 +9,9 @@
             bindgetuserinfo="login">
         登录
     </button>
+
+        <button class="experienceButton" 
+            bind:tap="experience">
+        体验
+    </button>
 </view>
